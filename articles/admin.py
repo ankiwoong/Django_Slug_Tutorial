@@ -8,6 +8,7 @@ class ArticleAdmin(admin.ModelAdmin):
         "title",
         "body",
     )
+    prepopulated_fields = {"slug": ("title",)}  # new
 
 
 admin.site.register(Article, ArticleAdmin)
